@@ -1,0 +1,138 @@
+html,
+body,
+.grid-container {
+  height: 100%;
+  margin: 0;
+  background:AliceBlue;
+  padding: 0 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 2fr 2fr;
+  gap: 1% 1%;
+  grid-template-areas:
+    "title title title"
+    "original-image analysis1 analysis2"
+    "hist_ori hist_attained hist_default";
+}
+
+input[type="file"] {
+  width: 50%;
+  margin-right: 20px;
+  border: solid 1px #bababa;
+}
+
+h5 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2% 0;
+  width:100%
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.original-image {
+  grid-area: original-image;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  border: solid 1px #bababa;
+  border-radius: 2%;
+}
+
+.blank {
+  grid-area: blank;
+}
+
+.analysis1 {
+  grid-area: analysis1;
+}
+
+.analysis2 {
+  grid-area: analysis2;
+}
+
+button {
+  background:#babaff;
+  border-radius:5px
+}
+
+#val_group{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0 5px;
+}
+
+#val_group>div{
+  width:fit-content;
+  justify-content: center;
+}
+
+.slider{
+  width: 100%;
+}
+
+#page_input{
+  width:20px;
+}
+
+.hist_ori {
+  grid-area: hist_ori;
+}
+
+.hist_attained {
+  grid-area: hist_attained;
+}
+
+.hist_default{
+  grid-area: hist_default;
+}
+
+.graph_container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /*
+  width:30vw;
+  height:20vh;
+  */
+  height: auto;
+  padding: 0 10px;
+  border: solid 1px #bababa;
+  border-radius: 2%;
+  padding-top: 1em;
+}
+
+.histchart{
+  width: 100%;
+  height: 100%;
+  color: #bababa;
+}
+
+#max_page{
+  padding:0 2px 0 0;
+}
+
+#binSizeGroup{
+  margin-left: 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CT Image Viewer</title>
+  <link rel="stylesheet" href="./static/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./static/js/nifti-reader-min.js"></script>
+  <script async src="./static/js/opencv.js" type="text/javascript"></script>
+  <script src="https://s0.pstatp.com/cdn/expire-1-M/numjs/0.16.0/numjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="grid-container">
+  <div class="title">
+    <input type="file" id="fileSelector">
+    <button id="btn_upload">upload</button>
+
+    <!-- <div id="binSizeGroup">
+      <input type="text" name="" id="binSize">
+      <button>change</button>
+    </div> -->
+  </div>
+  <div class="blank"></div>
+  <div class="original-image card">
+    <h5>Original Image</h5>
+    <!--<img src="https://loremflickr.com/360/360" alt="2D image" id="img_ori">-->
+    <canvas id="img_0"></canvas>
+    <div class="control-panel">
+      <button id="btn_minus">&lt</button>
+      <div id="val_group">
+        <div>
+          <input type="text" id="page_input"> /<label for="page_input" id="max_page"></label><button id="btn_go">go</button>
+        </div>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
+      <button id="btn_plus">&gt</button>
+    </div>
+  </div>
+  <div class="analysis1 card">
+    <h5>Attained Windowed Image</h5>
+    <canvas id="img_1"></canvas>
+    <span id="wwwl_1"></span>
+  </div>
+  <div class="analysis2 card">
+    <h5>Default Windowed Image</h5>
+    <canvas id="img_2"></canvas>
+    <span id="wwwl_2"></span>
+  </div>
+  <div class="hist_ori graph_container">
+    <div id="hist_0" class="histchart"></div>
+  </div>
+  <div class="hist_attained graph_container">
+    <div id="hist_1" class="histchart"></div>
+  </div>
+  <div class="hist_default graph_container">
+    <div id="hist_2" class="histchart"></div>
+  </div>
+</div>
+
+<!-- partial -->
+  
+
+</body>
+
+<script src="./static/js/app.js"></script>
+
+
+</html>
